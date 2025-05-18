@@ -1,0 +1,19 @@
+package com.bobossaura.rightclickandmilk.util;
+
+import com.bobossaura.rightclickandmilk.RightClickAndMilk;
+import net.minecraft.core.registries.Registries;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.tags.TagKey;
+import net.minecraft.world.entity.EntityType;
+
+public class ModTags {
+    public static class Entities {
+        public static final TagKey<EntityType<?>> MILKABLE_MOBS = create("bottle_milkable");
+
+        private static TagKey<EntityType<?>> create(String tagName) {
+            return TagKey.create(Registries.ENTITY_TYPE,
+                    ResourceLocation.fromNamespaceAndPath(RightClickAndMilk.MODID,
+                    tagName));
+        }
+    }
+}

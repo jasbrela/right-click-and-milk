@@ -1,5 +1,7 @@
 package com.bobossaura.rightclickandmilk;
 
+import com.bobossaura.rightclickandmilk.util.ModTags;
+import net.minecraft.network.chat.Component;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.InteractionHand;
@@ -17,7 +19,9 @@ import vectorwing.farmersdelight.common.registry.ModItems;
 public class CowMilkHandler {
     @SubscribeEvent
     public void onEntityInteract(PlayerInteractEvent.EntityInteractSpecific event) {
-        if (!(event.getTarget() instanceof Cow) && !(event.getTarget() instanceof Goat)) return;
+        var isMilkable = event.getTarget().getType().is(ModTags.Entities.MILKABLE_MOBS);
+        if (!isMilkable) return;
+
         Player player = event.getEntity();
         InteractionHand hand = event.getHand();
         ItemStack stack = player.getItemInHand(hand);
