@@ -12,7 +12,7 @@ import net.minecraft.world.item.ItemUtils;
 import net.minecraft.world.item.Items;
 import net.minecraftforge.event.entity.player.PlayerInteractEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
-//import vectorwing.farmersdelight.common.registry.ModItems;
+import vectorwing.farmersdelight.common.registry.ModItems;
 
 public class CowMilkHandler {
     @SubscribeEvent
@@ -23,14 +23,14 @@ public class CowMilkHandler {
         ItemStack stack = player.getItemInHand(hand);
 
         if (stack.is(Items.GLASS_BOTTLE)) {
-            /*if (!player.level().isClientSide) {
+            if (!player.level().isClientSide) {
                 ItemStack milkBottle = new ItemStack(ModItems.MILK_BOTTLE.get());
                 ItemStack result = ItemUtils.createFilledResult(stack, player, milkBottle);
                 player.setItemInHand(hand, result);
                 player.level().playSound(null, player.getX(), player.getY(), player.getZ(),
                         SoundEvents.COW_MILK, SoundSource.PLAYERS, 1.0F, 1.0F);
             }
-*/
+
             event.setCancellationResult(InteractionResult.sidedSuccess(player.level().isClientSide));
             event.setCanceled(true);
         }

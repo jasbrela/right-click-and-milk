@@ -43,8 +43,7 @@ public class RightClickAndMilk
 
         // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);
-        //TODO: register cowmilkhandler
-
+        MinecraftForge.EVENT_BUS.register(new CowMilkHandler());
 
         // Register the item to a creative tab
         modEventBus.addListener(this::addCreative);

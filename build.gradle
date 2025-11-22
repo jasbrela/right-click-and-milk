@@ -1,9 +1,23 @@
+buildscript {
+    repositories {
+        maven { url = 'https://files.minecraftforge.net' }
+        maven { url "https://repo.spongepowered.org/repository/maven-public/" }
+        mavenCentral()
+    }
+    dependencies {
+        classpath group: 'net.minecraftforge.gradle', name: 'ForgeGradle', version: '5.1.+', changing: true
+        classpath group: 'org.spongepowered', name: 'mixingradle', version: '0.7-SNAPSHOT'
+    }
+}
+
 plugins {
     id 'eclipse'
     id 'idea'
     id 'maven-publish'
     id 'net.minecraftforge.gradle' version '[6.0,6.2)'
 }
+
+apply plugin: 'org.spongepowered.mixin'
 
 version = mod_version
 group = mod_group_id
@@ -120,6 +134,9 @@ repositories {
     // flatDir {
     //     dir 'libs'
     // }
+    mavenLocal()
+
+    maven { url = 'https://repo.spongepowered.org/repository/maven-public' }
 
     maven {
         url "https://www.cursemaven.com"
@@ -127,7 +144,6 @@ repositories {
             includeGroup "curse.maven"
         }
     }
-    mavenLocal()
 }
 
 dependencies {
@@ -147,13 +163,13 @@ dependencies {
     // Example mod dependency using a mod jar from ./libs with a flat dir repository
     // This maps to ./libs/coolmod-${mc_version}-${coolmod_version}.jar
     // The group id is ignored when searching -- in this case, it is "blank"
-    // implementation fg.deobf("blank:coolmod-${mc_version}:${coolmod_version}")
+    //implementation fg.deobf("blank:coolmod-${mc_version}:${coolmod_version}")
 
     // For more info:
     // http://www.gradle.org/docs/current/userguide/artifact_dependencies_tutorial.html
     // http://www.gradle.org/docs/current/userguide/dependency_management.html
 
-    implementation "curse.maven:farmers-delight-398521:${farmersdelight_version}"
+    implementation fg.deobf("curse.maven:farmers-delight-398521:${farmersdelight_version}")
 }
 
 // This block of code expands all declared replace properties in the specified resource targets.
