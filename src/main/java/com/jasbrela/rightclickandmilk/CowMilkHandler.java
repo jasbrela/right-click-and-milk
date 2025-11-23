@@ -1,6 +1,6 @@
-package com.bobossaura.rightclickandmilk;
+package com.jasbrela.rightclickandmilk;
 
-import com.bobossaura.rightclickandmilk.util.ModTags;
+import com.jasbrela.rightclickandmilk.util.ModTags;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.InteractionHand;
