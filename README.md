@@ -1,8 +1,6 @@
 # Right Click and Milk
 
-<a href="https://www.curseforge.com/minecraft/mc-mods/right-click-and-milk">
-  <img src="http://cf.way2muchnoise.eu/full_1264015_downloads.svg" alt="Curseforge Downloads">
-</a>
+<a href="https://www.curseforge.com/minecraft/mc-mods/right-click-and-milk"><img src="http://cf.way2muchnoise.eu/full_1264015_downloads.svg" alt="Curseforge Downloads"></a>
 
 <img src="https://github.com/jasbrela/mc-right-click-and-milk/blob/1.21.1/src/main/resources/logo.png" height=150>
 
