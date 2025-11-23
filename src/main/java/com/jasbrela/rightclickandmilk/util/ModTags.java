@@ -1,6 +1,6 @@
-package com.bobossaura.rightclickandmilk.util;
+package com.jasbrela.rightclickandmilk.util;
 
-import com.bobossaura.rightclickandmilk.RightClickAndMilk;
+import com.jasbrela.rightclickandmilk.RightClickAndMilk;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.TagKey;

@@ -1,13 +1,10 @@
-package com.bobossaura.rightclickandmilk;
+package com.jasbrela.rightclickandmilk;
 
-import com.bobossaura.rightclickandmilk.util.ModTags;
-import net.minecraft.network.chat.Component;
+import com.jasbrela.rightclickandmilk.util.ModTags;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
-import net.minecraft.world.entity.animal.Cow;
-import net.minecraft.world.entity.animal.goat.Goat;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.ItemUtils;
