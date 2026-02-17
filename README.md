@@ -14,7 +14,7 @@ With an empty Glass Bottle in hand, right-click a **Cow**, **Goat** or **Mooshro
 No more going back and forth to grab Milk Buckets or crafting Milk Bottles in the workbench!
 
 ### 🏷️ Tags
-- If you want to add compatibility to your mod, you can tag your entities with `rightclickandmilk:bottle_milkable`.
+If you want to add compatibility to your mod, you can tag your entities with `rightclickandmilk:bottle_milkable`.
 
 ## 📸 Demonstration
 <img src="https://github.com/jasbrela/mc-right-click-and-milk/blob/1.21.1/img/cow.gif">

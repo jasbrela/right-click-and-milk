@@ -12,7 +12,7 @@ public class RightClickAndMilk
     public static final String MODID = "rightclickandmilk";
     private static final Logger LOGGER = LogUtils.getLogger();
 
-    public RightClickAndMilk(FMLJavaModLoadingContext context)
+    public RightClickAndMilk()
     {
         MinecraftForge.EVENT_BUS.register(new CowMilkHandler());
     }

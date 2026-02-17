@@ -28,7 +28,7 @@ public class CowMilkHandler {
             return;
         }
 
-        Player player = event.getEntity();
+        Player player = event.getPlayer();
         InteractionHand hand = event.getHand();
         ItemStack stack = player.getItemInHand(hand);
 
