@@ -28,21 +28,20 @@ public class CowMilkHandler {
             return;
         }
 
-
         Player player = event.getEntity();
         InteractionHand hand = event.getHand();
         ItemStack stack = player.getItemInHand(hand);
 
         if (stack.is(Items.GLASS_BOTTLE)) {
-            if (!player.level().isClientSide) {
+            if (!player.level.isClientSide) {
                 ItemStack milkBottle = new ItemStack(ModItems.MILK_BOTTLE.get());
                 ItemStack result = ItemUtils.createFilledResult(stack, player, milkBottle);
                 player.setItemInHand(hand, result);
-                player.level().playSound(null, player.getX(), player.getY(), player.getZ(),
+                player.level.playSound(null, player.getX(), player.getY(), player.getZ(),
                         getSfx(entity), SoundSource.PLAYERS, 1.0F, 1.0F);
             }
 
-            event.setCancellationResult(InteractionResult.sidedSuccess(player.level().isClientSide));
+            event.setCancellationResult(InteractionResult.sidedSuccess(player.level.isClientSide));
             event.setCanceled(true);
         }
     }
